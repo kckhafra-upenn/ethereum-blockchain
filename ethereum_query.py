@@ -17,7 +17,6 @@ def get_transaction(tx):
     tx = w3.eth.get_transaction(tx)
     return tx
 
-print(get_transaction('0x2e0827aa3121e674fee3c766d63e8704f4903cca355108e136e1289fc76ebff3'))
 # Return the gas price used by a particular transaction,
 #   tx is the transaction
 def get_gas_price(tx):
