@@ -22,6 +22,7 @@ def get_transaction(tx):
 #   tx is the transaction
 def get_gas_price(tx):
     gas_price = 1 #YOUR CODE HERE
+    gas_price = web3.eth.generate_gas_price(tx)
     return gas_price
 
 def get_gas(tx):
