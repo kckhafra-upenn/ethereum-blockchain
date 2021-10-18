@@ -30,8 +30,11 @@ def get_gas(tx):
     return gas
 
 def get_transaction_cost(tx):
-    tx_cost = get_gas_price(tx) + get_gas(tx) #YOUR CODE HERE
+    tx_cost = get_gas_price(tx) * get_gas(tx) #YOUR CODE HERE
+    # print(get_gas_price(tx))
+    # print(get_gas(tx))
     return tx_cost
+# get_transaction_cost('0x9a29da1ec35f0ccc9fbebfba5d93ea16fd1edbde8070967de7b7cd5b6b01a82f')
 
 def get_block_cost(block_num):
     block_cost = 1  #YOUR CODE HERE
