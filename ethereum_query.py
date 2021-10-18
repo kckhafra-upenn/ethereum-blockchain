@@ -42,7 +42,7 @@ def get_block_cost(block_num):
     for x in block.transactions:
         block_cost = x+block_cost
     return block_cost
-print("BLOCK: ",get_block_cost(4617))
+# print("BLOCK: ",get_block_cost(4617))
 
 # Return the hash of the most expensive transaction
 def get_most_expensive_transaction(block_num):
