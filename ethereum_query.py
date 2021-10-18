@@ -14,16 +14,19 @@ else:
     print( "Failed to connect to Ethereum node!" )
 
 def get_transaction(tx):
-    tx = {}   #YOUR CODE HERE
+    tx = w3.eth.get_transaction(tx)
     return tx
 
+# print(get_transaction('0x5c504ed432cb51138bcf09aa5e8a410dd4a1e204ef84bfed1be16dfba1b22060'))
 # Return the gas price used by a particular transaction,
 #   tx is the transaction
 def get_gas_price(tx):
     gas_price = 1 #YOUR CODE HERE
-    gas_price = w3.eth.estimate_gas({'to':tx })
-    print("GP: ",gas_price)
+    gas_price = w3.eth.generate_gas_price(tx)
+    
     return gas_price
+
+# print("GP: ",get_gas_price('0x5c504ed432cb51138bcf09aa5e8a410dd4a1e204ef84bfed1be16dfba1b22060'))
 
 def get_gas(tx):
     gas = 1 #YOUR CODE HERE
