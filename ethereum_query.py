@@ -27,8 +27,6 @@ def get_gas_price(tx):
     
     return gas_price
 
-print("GP: ",get_gas_price('0x5c504ed432cb51138bcf09aa5e8a410dd4a1e204ef84bfed1be16dfba1b22060'))
-
 def get_gas(tx):
     gas = 1 #YOUR CODE HERE
     return gas
