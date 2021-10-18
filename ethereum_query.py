@@ -21,13 +21,12 @@ def get_transaction(tx):
 #   tx is the transaction
 def get_gas_price(tx):
     transaction = get_transaction(tx)
-    # print("TR: ",transaction.gasPrice)
     gas_price =  transaction.gasPrice #YOUR CODE HERE
     
     return gas_price
 
 def get_gas(tx):
-    gas = 1 #YOUR CODE HERE
+    gas = w3.eth.get_transaction_receipt(tx).gasUsed
     return gas
 
 def get_transaction_cost(tx):
