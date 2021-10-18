@@ -17,16 +17,17 @@ def get_transaction(tx):
     tx = w3.eth.get_transaction(tx)
     return tx
 
-# print(get_transaction('0x5c504ed432cb51138bcf09aa5e8a410dd4a1e204ef84bfed1be16dfba1b22060'))
+print(get_transaction('0x2e0827aa3121e674fee3c766d63e8704f4903cca355108e136e1289fc76ebff3'))
 # Return the gas price used by a particular transaction,
 #   tx is the transaction
 def get_gas_price(tx):
-    gas_price = 1 #YOUR CODE HERE
-    gas_price = w3.eth.generate_gas_price(tx)
+    transaction = get_transaction(tx)
+    # print("TR: ",transaction.gasPrice)
+    gas_price =  transaction.gasPrice #YOUR CODE HERE
     
     return gas_price
 
-# print("GP: ",get_gas_price('0x5c504ed432cb51138bcf09aa5e8a410dd4a1e204ef84bfed1be16dfba1b22060'))
+print("GP: ",get_gas_price('0x5c504ed432cb51138bcf09aa5e8a410dd4a1e204ef84bfed1be16dfba1b22060'))
 
 def get_gas(tx):
     gas = 1 #YOUR CODE HERE
