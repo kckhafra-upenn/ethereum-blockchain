@@ -50,8 +50,11 @@ def get_block_cost(block_num):
 def get_most_expensive_transaction(block_num):
     block = w3.eth.getBlock(block_num)
     mostExpensive=HexBytes(0)
+    count=0
     for x in block.transactions:
+        count+=1
+        print(x,count)
         if(x>mostExpensive):
             mostExpensive=x
     max_tx = mostExpensive  #YOUR CODE HERE
-    return max_tx
+    return HexBytes(max_tx)
