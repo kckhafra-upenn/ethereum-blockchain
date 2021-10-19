@@ -38,7 +38,6 @@ def get_transaction_cost(tx):
 
 def get_block_cost(block_num):
     block = w3.eth.get_block(block_num)
-    get_transaction(block.)
     block_cost = 0 #YOUR CODE HERE
     # print(block)
     for x in block.transactions:
